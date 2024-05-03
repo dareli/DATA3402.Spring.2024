@@ -1,7 +1,7 @@
 # **DATA 3402 - Tabular Kaggle Project : Prediction Chirrosis Outcome**
 
 ## **Overview** 
-In this kaggle project, the challenge was to make a multi-class approach to predict the the outcomes of patients with cirrhosis. 
+In this kaggle project, the challenge was to make a multi-class approach to predict the the outcomes of patients with cirrhosis. Approaches utilized for the challenge includes Random Forest and XGBoost. 
 
 ## **About the Dataset** 
 Link to Dataset : [Multi-Class Prediction of Cirrhosis Outcomes](https://www.kaggle.com/competitions/playground-series-s3e26/overview)
@@ -37,6 +37,7 @@ Link to Dataset : [Multi-Class Prediction of Cirrhosis Outcomes](https://www.kag
 ### Data Visualization 
 - Looked at distributions of numerical columns
   - Over half of the numerical columns had a right skew
+ 
 - Created histograms for every feature between the target classes (D/C/CL)
   - Noticed that Age was in days and not in years
  
@@ -55,11 +56,21 @@ Link to Dataset : [Multi-Class Prediction of Cirrhosis Outcomes](https://www.kag
   - Random Forest : The outcome & time is considered until a status is met.
   - XG Boost : Can perform classification and regression tasks.
     - Since the "Status" is categorical in can also take into factor the amount of time ('N_Days') for predictions.
-- Model Evaluation
+- Model Evaluations
   - Metrics included 
     - Logarithmic Loss 
     - Classification report (Precision, Recall, F1)
-  - When compared :
+  - Conclusion:
     - XGBoost appears to be the better model overall in metric comparison
       - Has a lower log loss, implies more confidence and accuracy in probability predictions
       - Recall and macro average F1-score, XGBoost performs slightly better
+
+## Future Work 
+- Apply hyper parameter tuning to improve model accuracy
+  - Considerg Bayesian optimization as it finds the point that achieves the maximal result.
+  - Makes predictions on validation data & calculating validation metrics
+- Create more visuals for better analysis
+
+## Software Setup
+
+## Citations
