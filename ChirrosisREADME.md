@@ -39,6 +39,7 @@ Link to Dataset : [Multi-Class Prediction of Cirrhosis Outcomes](https://www.kag
   - Over half of the numerical columns had a right skew
 - Created histograms for every feature between the target classes (D/C/CL)
   - Noticed that Age was in days and not in years
+ 
 
 ### Data Cleaning and Preperation for Machine Learning
 - Since Age was set in days I converted it to years
@@ -58,5 +59,7 @@ Link to Dataset : [Multi-Class Prediction of Cirrhosis Outcomes](https://www.kag
   - Metrics included 
     - Logarithmic Loss 
     - Classification report (Precision, Recall, F1)
-  - When compared : 
-    
+  - When compared :
+    - XGBoost appears to be the better model overall in metric comparison
+      - Has a lower log loss, implies more confidence and accuracy in probability predictions
+      - Recall and macro average F1-score, XGBoost performs slightly better
