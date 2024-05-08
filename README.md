@@ -49,9 +49,10 @@ For example: Alk_Phos had the most outliers (792)
   - Over half of the numerical columns had a right skew
 ![distsBEFORE](https://github.com/dareli/DATA3402.Spring.2024/assets/123596270/d3255cb4-749d-437f-baeb-cd24839ea7dc)
 
-- Created histograms for every feature between the target classes (D/C/CL)
+- Created KDE histograms for every feature between the target classes (D/C/CL)
   - Noticed that Age was in days and not in years
-![hists](https://github.com/dareli/DATA3402.Spring.2024/assets/123596270/ec46b318-9f0b-4ff1-ba3a-44a90c6451c5)
+![kde_hists](https://github.com/dareli/DATA3402.Spring.2024/assets/123596270/a264775c-d030-4031-85ea-eb11acaff12e)
+
  
 
 ### Data Cleaning and Preperation for Machine Learning
@@ -61,7 +62,6 @@ For example: Alk_Phos had the most outliers (792)
   - I did log transformation to have a better scale since this technique compress the range of data.
 
 Distributions after cleaning & transformation
-![distsAFTER](https://github.com/dareli/DATA3402.Spring.2024/assets/123596270/5bb8f5f9-bf96-4ee7-896f-3c714df73417)
 
 ### Machine Learning 
 - Training :
