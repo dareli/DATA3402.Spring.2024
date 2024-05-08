@@ -108,6 +108,7 @@ Distributions after cleaning & transformation
   - Pandas
   - Matplotlib
   - Seaborn
+  - SciPy
   - scikit-learn
   - XGBoost
 
