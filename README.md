@@ -1,18 +1,17 @@
 # **DATA 3402 - Tabular Kaggle Project : Prediction Chirrosis Outcome**
 
+![UTA-DataScience-Logo](https://github.com/dareli/DATA3402.Spring.2024/assets/123596270/0cb941d4-8a3b-4382-9dd0-22c28edbb8a5)
+
 ## **Overview** 
 In this kaggle project, the challenge was to make a multi-class approach to predict the the outcomes of patients with cirrhosis. Approaches utilized for the challenge includes Random Forest and XGBoost. 
 
-## **About the Dataset** 
-Link to Dataset : [Multi-Class Prediction of Cirrhosis Outcomes](https://www.kaggle.com/competitions/playground-series-s3e26/overview)
-- Tabular
-- Came with a train.csv and a test.csv
-- Evaluated using the multi-class logarithmic loss, where each ID in the test set is assigned a single true class label named "Status."
-- The submission containing predicted probabilities for 3 potential outcomes: Status_C, Status_CL, and Status_D for each ID.
-
-## **Outline of Work Done** 
-### Data Loading & Initial Look
-
+## **Summary of Work Done** 
+### Data
+  - Tabular
+  - Came with a train.csv and a test.csv
+  - Evaluated using the multi-class logarithmic loss, where each ID in the test set is assigned a single true class label named "Status."
+  - The submission containing predicted probabilities for 3 potential outcomes: Status_C, Status_CL, and Status_D for each ID.
+  - 
 #### First looking at the Training set
 - Size : (7905, 20)
 - Columns are numerical and categorical
@@ -55,7 +54,7 @@ For example: Alk_Phos had the most outliers (792)
 
  
 
-### Data Cleaning and Preperation for Machine Learning
+### Preprocessing / Clean Up
 - Since Age was set in days I converted it to years
   
 - To handle the numerical columns having the right skew
@@ -63,7 +62,7 @@ For example: Alk_Phos had the most outliers (792)
 
 Distributions after cleaning & transformation
 
-### Machine Learning 
+### Problem Formulation / Machine Learning 
 - Training :
   - I dropped the 'id' column
   - Split the training set using train_test_split
@@ -75,7 +74,7 @@ Distributions after cleaning & transformation
   - XG Boost : Can perform classification and regression tasks.
     - Since the "Status" is categorical in can also take into factor the amount of time ('N_Days') for predictions.
 
-- Model Evaluations : 
+### **Perfromance/Model Evaluations :** 
   - Metrics included 
     - Logarithmic Loss 
     - Classification report (Precision, Recall, F1)
@@ -87,20 +86,23 @@ Distributions after cleaning & transformation
   - Has a lower log loss, implies more confidence and accuracy in probability predictions
   - Recall and macro average F1-score, XGBoost performs slightly better
 
-## **Future Work** 
+## **Future Work**
 - Apply hyper parameter tuning to improve model accuracy
   - Considerg Bayesian optimization as it finds the point that achieves the maximal result.
   - Makes predictions on validation data & calculating validation metrics
   - Faster than GridSreach
 - Create more visuals for better analysis
+  - Since I focused more on numerical columns, in the future it would be useful to also look into the categorical columns
 
-## **Overview of Files in Repository**
-- cirrhosis_project.csv : notebook for all data understanding, preprocessing, transformation, training, models and model evaluations
+## **How to reproduce results** 
+
+### **Overview of Files in Repository**
+- cirrhosis_project.ipynb : overall notebook for all data understanding, preprocessing, transformation, training, models and model evaluations
 - cirrhosis_submission.csv : submission file for containing predicted probabilities for 3 potential outcomes and id
 - cirrhosis_train : provided model training file
 - cirrhosis_test : provided model test file
 
-## **Software Setup**
+### **Software Setup**
 - Python3.11 through Jupyter Notebook
 
 - Packages used :
@@ -111,6 +113,9 @@ Distributions after cleaning & transformation
   - SciPy
   - scikit-learn
   - XGBoost
+
+### **Data**
+Link to Dataset : [Multi-Class Prediction of Cirrhosis Outcomes](https://www.kaggle.com/competitions/playground-series-s3e26/overview)
 
 ## **Citations**
 [1] Kaggle. "Playground Series S3E26 - Data." Accessed on May 3, 2024. Available at: https://www.kaggle.com/competitions/playground-series-s3e26/data
