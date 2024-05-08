@@ -75,32 +75,32 @@ Distributions after cleaning & transformation
   - XG Boost : Can perform classification and regression tasks.
     - Since the "Status" is categorical in can also take into factor the amount of time ('N_Days') for predictions.
 
-- Model Evaluations
+- Model Evaluations : 
   - Metrics included 
     - Logarithmic Loss 
     - Classification report (Precision, Recall, F1)
     <img width="443" alt="RFM" src="https://github.com/dareli/DATA3402.Spring.2024/assets/123596270/04d2f411-231b-48d6-9252-0cd8b20c71ad">
     <img width="443" alt="XGBM" src="https://github.com/dareli/DATA3402.Spring.2024/assets/123596270/75712e6a-176e-447b-8d0e-de07cf533730">
 
-- Conclusion:
+## **Conclusion:**
   - XGBoost appears to be the better model overall in metric comparison
   - Has a lower log loss, implies more confidence and accuracy in probability predictions
   - Recall and macro average F1-score, XGBoost performs slightly better
 
-## Future Work 
+## **Future Work** 
 - Apply hyper parameter tuning to improve model accuracy
   - Considerg Bayesian optimization as it finds the point that achieves the maximal result.
   - Makes predictions on validation data & calculating validation metrics
   - Faster than GridSreach
 - Create more visuals for better analysis
 
-## Overview of Files in Repository
+## **Overview of Files in Repository**
 - cirrhosis_project.csv : notebook for all data understanding, preprocessing, transformation, training, models and model evaluations
 - cirrhosis_submission.csv : submission file for containing predicted probabilities for 3 potential outcomes and id
 - cirrhosis_train : provided model training file
 - cirrhosis_test : provided model test file
 
-## Software Setup
+## **Software Setup**
 - Python3.11 through Jupyter Notebook
 
 - Packages used :
@@ -112,7 +112,7 @@ Distributions after cleaning & transformation
   - scikit-learn
   - XGBoost
 
-## Citations
+## **Citations**
 [1] Kaggle. "Playground Series S3E26 - Data." Accessed on May 3, 2024. Available at: https://www.kaggle.com/competitions/playground-series-s3e26/data
 
 [2] Run.AI Guides. "Bayesian Hyperparameter Optimization." Accessed on May 3, 2024. Available at: https://www.run.ai/guides/hyperparameter-tuning/bayesian-hyperparameter-optimization
